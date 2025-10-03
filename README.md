@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # DotHrb
 
 **DotHrb** is a multi-platform, multi-threading Http Application Server for the Harbour Language aimed to easy the migration of Harbour legacy code to modern PWAs.
@@ -14,12 +18,12 @@ A typical **DotHrb** workflow is based on templates already present in the SDK b
 
 ```mermaid
 graph TD
-    A[Run ProgramMain] --> B(Run StartupModule);
-    B --> C{Wait for Requests};
-    C -->|Is a page| D[Process page];
-    C -->|Is a controller| E[Process controller];
-    D <-->|Use| H[Model];
-    E <-->|Use| H[Model];
-    C -->|Got Ctrl+C or Signal End| F[Run ShutdownModule];
-    F -->|Close| G[End]
+    A[dotgen new webapp -o myapp]
+    --> B(edit settings and data paths);
+    B --> C{dotgen make:`Component...`};
+    C --> |development| D[edit generated component] --> |cycle| C;
+    C --> |deploy version| E[dothrb publish ...]
+    E --> F[move the `published directory` to the target]
 ```
+
+All the components are compiled on fly to Harbour classes. The UI is defined using HTML files with special @functions(...) to automate grids, forms, reports and so on. All the Harbour code is bundled inside a single .dllx file to provide code integrity and security. Static content like css and js is minimized and bundled automatically buring the publishing step and everything can be moved to the deployment site as it is.
