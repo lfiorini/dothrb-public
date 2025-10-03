@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # DotHrb
 
 **DotHrb** is a multi-platform, multi-threading Http Application Server for the Harbour Language aimed to easy the migration of Harbour legacy code to modern PWAs.
