@@ -1,3 +1,3 @@
 # DotHrb
 
-**DotHrb** is a multiplatform, multithreading Http Application Server for the Harbour Language.
+**DotHrb** is a multi-platform, multi-threading Http Application Server for the Harbour Language.
