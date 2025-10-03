@@ -16,10 +16,11 @@ A typical **DotHrb** workflow is based on templates already present in the SDK b
 graph TD
     A[dotgen new webapp -o myapp]
     --> B(edit settings and data paths);
-    B --> C{dotgen make:`Component...`};
+    B --> C{make `Component...`};
     C --> |development| D[edit generated component] --> |cycle| C;
-    C --> |deploy version| E[dothrb publish ...]
+    C --> |deploy version| E[publish ...]
     E --> F[move the `published directory` to the target]
 ```
 
 All the components are compiled on fly to Harbour classes. The UI is defined using HTML files with special @functions(...) to automate grids, forms, reports and so on. All the Harbour code is bundled inside a single .dllx file to provide code integrity and security. Static content like css and js is minimized and bundled automatically buring the publishing step and everything can be moved to the deployment site as it is.
+
