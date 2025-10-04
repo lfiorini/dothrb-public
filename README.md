@@ -1,4 +1,6 @@
-# DotHrb: Modernizing Harbour Applications 🚀
+# DotHrb Intro
+
+##  Modernizing Harbour Applications 🚀
 
 **DotHrb** is a **multi-platform, multi-threading HTTP Application Server** for the **Harbour Language**. It's specifically designed to simplify and accelerate the migration of **legacy Harbour code** into modern **Progressive Web Applications (PWAs)**.
 
