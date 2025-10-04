@@ -29,11 +29,10 @@ The **DotHrb** workflow is designed for speed and consistency, leveraging SDK te
 ```mermaid
 graph TD
     A[dotgen new webapp -o myapp]
-    --> B(Configure paths & settings);
+    --> B(Set data paths);
     B --> C{Create `Component...`};
     C --> |Development Cycle| D[Edit Generated Component Logic] --> C;
-    C --> |Publish/Build Version| E[publish ...]
-    E --> F[Move the `published directory` to the target server]
+    C --> |Publish/Build Version| E[Publish create a ready to deploy folder]
 ```
 
 ### Security & Optimization
@@ -41,4 +40,4 @@ graph TD
   * **On-the-Fly Compilation:** All components are compiled on the fly into **Harbour classes**, ensuring modern, object-oriented structure.
   * **Secure Bundling:** All Harbour code is bundled within a single **`.dllx` file**, providing enhanced **code integrity and security**.
   * **Automated UI Generation:** The user interface is defined using standard **HTML files** augmented with special `@functions(...)` to automatically generate complex elements like **grids, forms, and reports**.
-  * **Deployment Ready:** During the publishing step, static content (like CSS and JS) is **automatically minimized and bundled**. The resulting package is ready for deployment, requiring no further modifications on the target server.
+  * **Deployment Ready:** During the publishing step, static content (like CSS and JS) is **automatically minimized and bundled**. The resulting package is ready for deployment, requiring no further modifications.
